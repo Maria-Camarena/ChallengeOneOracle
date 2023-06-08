@@ -1,0 +1,281 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background: #f3f5fc;
+}
+
+.text {
+  position: absolute;
+  width: 42%;
+  height: 60%;
+  left: 12%;
+  top: 15%;
+  border: none;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 150%;
+  background-color: #f3f5fc;
+}
+
+.text::placeholder {
+  color: #0a3871;
+}
+
+.text:focus,
+.text:active {
+  border: none;
+  outline: none;
+}
+
+.terms {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  gap: 8px;
+  position: absolute;
+  width: 80%;
+  left: 12%;
+  top: 80%;
+}
+
+.terms p {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 150%;
+  color: #495057;
+  opacity: 0.8;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 1% 0;
+  position: absolute;
+  width: 80%;
+  left: 12%;
+  top: 82%;
+}
+
+.btn-encrypt {
+  align-items: center;
+  justify-content: center;
+  padding: 2%;
+  gap: 8px;
+  width: 25%;
+  background-color: #0a3871;
+  border-radius: 24px;
+  font-family: "Inter";
+  font-size: 18px;
+  line-height: 19px;
+  text-align: center;
+  color: #fff;
+}
+
+.btn-decrypt {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 2%;
+  gap: 8px;
+  width: 25%;
+  background: #d8dfe8;
+  border: 1px solid #0a3871;
+  border-radius: 24px;
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 19px;
+  text-align: center;
+  color: #0a3871;
+}
+
+.btn-decrypt:hover,
+.btn-encrypt:hover {
+  margin: 0.3%;
+  width: 24.5%;
+  padding: 1.8%;
+}
+
+.encrypted {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  width: 30%;
+  height: 90%;
+  left: 60%;
+  top: 5%;
+  background: #fff;
+  box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+  border-radius: 32px;
+}
+
+.msg-encrypted {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1%;
+  gap: 16px;
+  position: absolute;
+  width: 100%;
+  top: 65%;
+  text-align: center;
+}
+
+.msg-encrypted h2 {
+  width: 60%;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 120%;
+  text-align: center;
+  color: #343a40;
+}
+
+.msg-encrypted p {
+  width: 80%;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  text-align: center;
+  color: #495057;
+}
+
+.encrypted img {
+  position: absolute;
+  width: 80%;
+  height: 50%;
+  top: 15%;
+}
+
+.toast{
+  width: 400px;
+  height: 80px;
+  background: #fff;
+  font-weight: 500;
+  margin: 15px 0;
+  border-radius: 5px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.03);
+  display: flex;
+  align-items: center;
+  position: relative;
+  transform: translateX(100%);
+  animation: moveleft 0.5s linear forwards;
+}
+
+@keyframes moveleft{
+  100%{
+    transform: translateX(0);
+  }
+}
+
+.toast i{
+  margin: 0 20px;
+  font-size: 25px;
+}
+
+.toast.success i{
+  color: green;
+}
+
+.toast.error i{
+  color: red;
+}
+
+.toast::after{
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 5px;
+  animation: anim 6s linear forwards;
+}
+
+@keyframes anim {
+  100%{
+    width: 0;
+  }
+}
+
+.toast.error::after{
+  background: red;
+}
+.toast.success::after{
+  background: green;
+}
+
+@media (max-width: 57.5em) {
+  main {
+    display: flex;
+    flex-direction: row;
+  }
+  .Encrypt {
+    width: 100%;
+  }
+  .text {
+    width: 80%;
+    height: 60%;
+    left: 10%;
+    top: 5%;
+  }
+  .terms {
+    width: 80%;
+    left: 10%;
+    top: 67%;
+  }
+  .terms p {
+    font-size: 16px;
+  }
+  .buttons {
+    width: 80%;
+    left: 10%;
+    top: 70%;
+  }
+  .btn-decrypt,
+  .btn-encrypt {
+    width: 48%;
+    border-radius: 16px;
+  }
+  .btn-decrypt:hover,
+  .btn-encrypt:hover {
+    margin: 0.3%;
+    width: 47.5%;
+    padding: 1.8%;
+  }
+  .encrypted {
+    width: 80%;
+    height: 15%;
+    left: 10%;
+    top: 80%;
+  }
+  .msg-encrypted {
+    width: 100%;
+    top: 5%;
+  }
+  .encrypted img {
+    top: 0;
+    display: none;
+    visibility: hidden;
+  }
+}

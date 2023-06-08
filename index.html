@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="assets/favicon.png"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css">
+    <title>Encrypt Challenges Oracle One</title>
+    <script src="js/script.js" defer></script>
+    <script src="https://kit.fontawesome.com/85dc7a7e65.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <main>
+      <section class="Encrypt">
+        <textarea
+          name="texto"
+          class="text"
+          id="message"
+          cols="30"
+          rows="10"
+          placeholder="Tecleé el mensaje que quiere encriptar"
+        ></textarea>
+        <div class="terms">
+          <p>Sin caracteres especiales</p>
+        </div>
+
+        <div class="buttons">
+          <input
+            type="button"
+            class="btn-encrypt"
+            value="Encrypt"
+            id="btn-encrypt"
+            onclick="validMessage()"
+          />
+          <input
+            type="button"
+            class="btn-decrypt"
+            value="Decrypt"
+            onclick="decrypt()"
+          />
+        </div>
+      </section>
+      <section class="encrypted">
+        <img src="assets/muñeco.png" alt="" id="doll" />
+        <div class="msg-encrypted" id="mensaje-encriptado">
+          <h2 id="title-msg">Ningún mensaje fue encontrado</h2>
+          <p id="paragraph">
+            Ingresa el texto que deseas encriptar o desencriptar
+          </p>
+        </div>
+      </section>
+      <div id="toastBox"></div>
+    </main>
+  </body>
+</html>
